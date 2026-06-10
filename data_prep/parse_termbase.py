@@ -1,12 +1,12 @@
 """
-parse_termbase.py – Extract (Swedish → English) term pairs from Catena CSV termbases.
+parse_termbase.py – Extract (Swedish → English) term pairs from Client X CSV termbases.
 
 Usage:
     python scripts/parse_termbase.py
 
 Output:
-    data/catena_baseline/processed/termbase.jsonl
-    data/catena_baseline/processed/termbase_summary.txt
+    data/clientx_baseline/processed/termbase.jsonl
+    data/clientx_baseline/processed/termbase_summary.txt
 """
 
 import csv
@@ -14,13 +14,13 @@ import json
 import logging
 from pathlib import Path
 
-RAW_DIR = Path("data/catena_baseline/raw/Catena_package")
-OUT_DIR  = Path("data/catena_baseline/processed")
+RAW_DIR = Path("data/clientx_baseline/raw/ClientX_package")
+OUT_DIR  = Path("data/clientx_baseline/processed")
 OUT_FILE = OUT_DIR / "termbase.jsonl"
 
 # (filename, en_col_indices, sv_col_indices)  — 0-based
 CSV_CONFIGS = [
-    ("Catena termbase.csv",        "catena",        [11,14,17,20], [24,27,30,33]),
+    ("Client X termbase.csv",        "client_x",        [11,14,17,20], [24,27,30,33]),
     ("Fluid Finance termbase.csv", "fluid_finance",  [15,18,21],    [42,45,48]),
 ]
 

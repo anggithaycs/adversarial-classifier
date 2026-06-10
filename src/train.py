@@ -1,7 +1,7 @@
 
 """
 train.py 
-=> Train the StyleGuideClassifier on the Catena compliance dataset.
+=> Train the StyleGuideClassifier on the Client X compliance dataset.
  
 Usage:
     python train.py

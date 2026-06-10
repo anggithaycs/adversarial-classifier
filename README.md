@@ -3,7 +3,7 @@
 *Language Engineering Mini Project*
 
 A binary Transformer-based text classifier trained to detect style-guide
-violations in Swedish→English financial translations (Catena AB, translated
+violations in Swedish→English financial translations (Client X, translated
 by Fluid Translation). The project covers all four assignment steps:
 model training, gradient saliency analysis, adversarial attack, and defense.
 
@@ -11,7 +11,7 @@ model training, gradient saliency analysis, adversarial attack, and defense.
 > style guide) and all derived files (`data/`, `models/`, `results/`, `splits/`)
 > are **not tracked in this repository** — they are confidential and are
 > git-ignored. To reproduce, place the raw client files under
-> `data/raw/Catena_package/` and run the pipeline below.
+> `data/raw/ClientX_package/` and run the pipeline below.
 
 ## Repository structure
 
@@ -53,7 +53,7 @@ pip install torch scikit-learn
 ### Step 0 · Create output directories
 
 ```bash
-mkdir -p data/raw/Catena_package
+mkdir -p data/raw/ClientX_package
 mkdir -p data/processed
 mkdir -p splits
 mkdir -p models results/saliency/heatmaps results/attack results/defense
@@ -91,7 +91,7 @@ python data_prep/generate_violations.py
 ```
 Output: `data/processed/violations.jsonl` (3,115 violations)
 
-31 violation rules derived directly from the Catena style guide:
+31 violation rules derived directly from the Client X style guide:
 
 - **Tier 1 (26 rules)** — unconditional string substitutions
   e.g. `percent → per cent`, `SEK X million → X Mkr`, `m² → square meters`

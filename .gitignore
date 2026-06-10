@@ -6,3 +6,6 @@ splits/
 __pycache__/
 *.pt
 *.png
+.venv/
+processed/
+.DS_Store

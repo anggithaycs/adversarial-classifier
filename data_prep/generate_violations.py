@@ -1,7 +1,7 @@
 """
 generate_negatives.py 
 => To enerate non-compliant (negative) training synthetic examples
-by injecting known Catena style-guide violations into positive pairs.
+by injecting known Client X style-guide violations into positive pairs.
  
 !! Remember !!
 Usage:

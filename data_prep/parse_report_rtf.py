@@ -1,30 +1,30 @@
 """
-parse_report_rtf.py – Extract bilingual Swedish-English report segments from Catena RTF exports.
+parse_report_rtf.py – Extract bilingual Swedish-English report segments from Client X RTF exports.
 
 Usage:
     python scripts/parse_report_rtf.py
 
 Output:
-    data/catena_baseline/processed/q3_2025_segments.jsonl
-    data/catena_baseline/processed/q1_2026_segments.jsonl
+    data/clientx_baseline/processed/q3_2025_segments.jsonl
+    data/clientx_baseline/processed/q1_2026_segments.jsonl
 """
 
 import json
 import re
 from pathlib import Path
 
-RAW_DIR = Path("data/catena_baseline/raw/Catena_package")
-OUT_DIR = Path("data/catena_baseline/processed")
+RAW_DIR = Path("data/clientx_baseline/raw/ClientX_package")
+OUT_DIR = Path("data/clientx_baseline/processed")
 
 REPORTS = [
     {
-        "doc_id": "catena_q3_2025",
-        "input_file": "SWE-ENG_Catena Q3 2025.rtf",
+        "doc_id": "clientx_q3_2025",
+        "input_file": "SWE-ENG_ClientX Q3 2025.rtf",
         "output_file": "q3_2025_segments.jsonl",
     },
     {
-        "doc_id": "catena_q1_2026",
-        "input_file": "SWE-ENG_Catena Q1 2026.rtf",
+        "doc_id": "clientx_q1_2026",
+        "input_file": "SWE-ENG_ClientX Q1 2026.rtf",
         "output_file": "q1_2026_segments.jsonl",
     },
 ]

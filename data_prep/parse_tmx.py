@@ -1,11 +1,11 @@
 """
-parse_tmx.py  –  Extract (sv, en-gb) sentence pairs from Catena TMX files.
+parse_tmx.py  –  Extract (sv, en-gb) sentence pairs from Client X TMX files.
 
 Usage:
     python scripts/parse_tmx.py
 
 Output:
-    data/catena_baseline/processed/sentence_pairs.jsonl
+    data/clientx_baseline/processed/sentence_pairs.jsonl
 """
 
 import xml.etree.ElementTree as ET
@@ -16,13 +16,13 @@ from pathlib import Path
 
 # ── Config ────────────────────────────────────────────────────────────────────
 
-RAW_DIR = Path("data/catena_baseline/raw/Catena_package")
-OUT_DIR = Path("data/catena_baseline/processed")
+RAW_DIR = Path("data/clientx_baseline/raw/ClientX_package")
+OUT_DIR = Path("data/clientx_baseline/processed")
 OUT_FILE = OUT_DIR / "sentence_pairs.jsonl"
 
 TMX_FILES = [
-    "Catena-master-sv-en-gb.tmx",
-    "Catena-2281 Q1 2026-sv-en-gb-sv-en-gb.tmx",
+    "ClientX-master-sv-en-gb.tmx",
+    "ClientX-2281 Q1 2026-sv-en-gb-sv-en-gb.tmx",
 ]
 
 MIN_CHAR_LEN = 30
